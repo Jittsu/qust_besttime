@@ -1,1 +1,1 @@
-web: gunicorn best_time .wsgi --log-file -
+web: gunicorn best_time.wsgi --log-file -
