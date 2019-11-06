@@ -5,12 +5,12 @@ def index(request):
     context = {
         'name': 'Welcome to Best Time Manage App',
     }
-    return render(request, 'besttimeapp/index.html') #, context)
+    return render(request, 'index.html') #, context)
 
 def about(request):
     """ about アバウトページ"""
-    return render(request, 'besttimeapp/about.html')
+    return render(request, 'about.html')
 
 def info(request):
     """ info インフォページ"""
-    return render(request, 'besttimeapp/info.html')
+    return render(request, 'info.html')
