@@ -27,6 +27,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
+# time zone
+TIME_ZONE = 'Asia/Tokyo'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -69,6 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'best_time.wsgi.application'
 
+# login
+LOGIN_URL='admin:login'
+LOGOUT_REDIRECT_URL='/besttimeapp/'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -80,6 +86,10 @@ DATABASES = {
     }
 }
 
+# update db settings
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=400)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
