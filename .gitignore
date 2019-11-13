@@ -1,7 +1,7 @@
 myenv/
 __pycache__/
 staticfiles
-mysite/local_settings.py
+best_time/local_settings.py
 .python-version
 .vscode
 db.sqlite3
