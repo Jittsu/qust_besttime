@@ -20,7 +20,7 @@ class Item(models.Model):
         (5, '個人メドレー'),
     )
 
-    kanji_name = models.CharField(
+    name = models.CharField(
         verbose_name = '名前（漢字）',
         max_length = 10
     )
