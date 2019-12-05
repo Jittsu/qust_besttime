@@ -9,4 +9,6 @@ urlpatterns = [
     path(r'', views.index, name='index'),
     path(r'about/', views.about, name='about'), 
     path(r'info/', views.info, name='info'),
+    path(r'signup/', views.signup, name='signup'),
+    path(r'<str:name>/getbest/', views.getbest, name='getbest'),
 ]

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def index(request):
     """トップページ"""
@@ -14,3 +15,10 @@ def about(request):
 def info(request):
     """ info インフォページ"""
     return render(request, 'info.html')
+
+def signup(request):
+    """ signup サインアップページ"""
+    return render(request, 'signup.html')
+
+def getbest(request, name):
+    return HttpResponse("Your best time is %s." % name)
