@@ -1,0 +1,58 @@
+<!--from https://qiita.com/kaki_k/items/6e17597804437ef170ae-->
+{% load i18n static %}
+<!DOCTYPE html>{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="{% static 'besttimeapp/css/bootstrap.min.css' %}">
+{% block extra_css %}{% endblock %}
+<title>{% block title %}My swims{% endblock %}</title>
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand konza-logo" href="/index">BESTTIME APP</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">トップページ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">記録の確認</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">記録の登録</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">設定</a>
+          </li>
+        </ul>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    </nav>
+  </header>
+  <main>
+  <div class="container-fluid">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+  </main>
+<script src="{% static 'besttimeapp/js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'besttimeapp/js/bootstrap.bundle.min.js' %}"></script>
+<style>
+  body {background-color: #FFFFFF;}
+  header {background-color: #c06c84;}
+  main {background-color: #FFFFFF;}
+  footer {background-color: #f67280;:q
+  }
+</style>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
