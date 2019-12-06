@@ -10,5 +10,6 @@ urlpatterns = [
     path(r'about/', views.about, name='about'), 
     path(r'info/', views.info, name='info'),
     path(r'signup/', views.signup, name='signup'),
-    path(r'<str:name>/getbest/', views.getbest, name='getbest'),
+    path(r'alldata/', views.get_alldata, name='alldata'),
+    path(r'<str:name>/best/', views.get_best, name='best'),
 ]

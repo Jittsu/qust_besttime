@@ -10,15 +10,19 @@ def index(request):
 
 def about(request):
     """ about アバウトページ"""
-    return render(request, 'about.html')
+    return render(request, 'besttimeapp/about.html')
 
 def info(request):
     """ info インフォページ"""
-    return render(request, 'info.html')
+    return render(request, 'besttimeapp/info.html')
 
 def signup(request):
     """ signup サインアップページ"""
-    return render(request, 'signup.html')
+    return render(request, 'besttimeappsignup.html')
 
-def getbest(request, name):
+def get_alldata(request):
+    """ 全データの取得 """
+    return render(request, 'besttimeapp/showall.html')
+
+def get_best(request, name):
     return HttpResponse("Your best time is %s." % name)
