@@ -1,5 +1,5 @@
 """
-WSGI config for best_time project.
+WSGI config for my_docker_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'best_time.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'swim_time.settings')
 
 application = get_wsgi_application()

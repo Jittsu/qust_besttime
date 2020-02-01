@@ -1,6 +1,9 @@
-FROM python:3
-ENV PYTHONUNBUFFERED 1
-WORKDIR /server
-ADD requirements.txt /server/
-RUN pip install -r requirements.txt
-ADD . /server/
+FROM django2.1:latest
+
+ENV APP_PATH .
+
+COPY . $APP_PATH/
+RUN pip install --no-cache-dir -r $APP_PATH/requirements.txt
+
+WORKDIR $APP_PATH
+RUN python manage.py collectstatic --noinput

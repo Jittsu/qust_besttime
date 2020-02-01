@@ -1,3 +1,0 @@
-2019/10/16 06:07:57 [emerg] 12#12: host not found in upstream "django:8001" in /etc/nginx/sites-enabled/default:4
-2019/10/16 06:20:52 [emerg] 13#13: host not found in upstream "django:8001" in /etc/nginx/sites-enabled/default:4
-2020/02/01 05:52:42 [emerg] 12#12: host not found in upstream "django:8001" in /etc/nginx/sites-enabled/default:4
