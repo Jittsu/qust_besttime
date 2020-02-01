@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'swim_time'
+ROOT_URLCONF = 'swim_time.urls'
 
 TEMPLATES = [
     {
